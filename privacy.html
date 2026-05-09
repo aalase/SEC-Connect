@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="icon_512.png">
   <title>FilrAI Privacy Policy</title>
   <style>
     :root {
@@ -27,28 +28,53 @@
         radial-gradient(1000px circle at 10% -10%, #5f666d 0%, transparent 35%),
         linear-gradient(180deg, var(--bg-accent), var(--bg));
       min-height: 100vh;
-      padding: clamp(1rem, 2vw, 2rem);
+      padding: clamp(1.25rem, 4vw, 4rem);
     }
 
     .container {
       width: min(900px, 100%);
       margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(1.25rem, 2.8vw, 2rem);
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+      padding: clamp(1rem, 3vw, 2rem) 0 clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
+      border-left: 2px solid var(--border);
+    }
+
+    .site-header {
+      margin-bottom: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand img {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: block;
+    }
+
+    .brand span {
+      font-size: 1rem;
     }
 
     h1 {
       margin-top: 0;
       margin-bottom: 0.5rem;
-      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-size: clamp(2.1rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
     }
 
     h2 {
-      margin-top: 2rem;
+      margin-top: 2.2rem;
       margin-bottom: 0.7rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--border);
       font-size: 1.25rem;
     }
 
@@ -88,32 +114,40 @@
     }
 
     .back {
-      display: inline-block;
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
       margin-top: 1rem;
-      color: white;
+      color: var(--brand);
       text-decoration: none;
-      background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-      border-radius: 10px;
-      padding: 0.55rem 0.85rem;
-      font-weight: 600;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.15rem;
+      font-weight: 700;
     }
 
     .back:hover,
     .back:focus-visible {
-      filter: brightness(1.08);
+      color: white;
       outline: none;
     }
   </style>
 </head>
 <body>
   <main class="container">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="icon_512.png" alt="" width="40" height="40">
+        <span>FilrAI</span>
+      </a>
+    </header>
+
     <h1>Privacy Policy</h1>
     <p class="updated"><strong>Effective date:</strong> May 9, 2026</p>
 
     <p>FilrAI is a macOS app for researching SEC filings, company disclosures, market-related feeds, and AI-assisted summaries. This Privacy Policy explains what information may be processed when you use FilrAI and how that information is handled.</p>
 
     <div class="notice">
-      <p><strong>Important update:</strong> Some FilrAI features use cloud-based AI model providers. When you use those features, prompts, filing excerpts, questions, and generated outputs may be transmitted to third-party AI services to provide responses.</p>
+      <p><strong>Important update:</strong> Some FilrAI features use cloud-based AI model providers. When you use those features, prompts, filing excerpts, questions, and generated outputs may be transmitted to third-party AI services to provide responses. Third-party AI providers may use submitted data according to their own policies, including to improve or train models.</p>
     </div>
 
     <h2>Information You Provide</h2>
@@ -126,7 +160,7 @@
     </ul>
 
     <h2>Cloud AI Processing</h2>
-    <p>FilrAI may send user prompts, selected filing content, context needed to answer a request, and generated outputs to cloud AI model providers. These providers process the information to generate summaries, explanations, or other AI-assisted responses.</p>
+    <p>FilrAI may send user prompts, selected filing content, context needed to answer a request, and generated outputs to cloud AI model providers. These providers process the information to generate summaries, explanations, or other AI-assisted responses, and may use submitted data according to their own policies, including to improve or train models.</p>
     <p>Please do not submit sensitive personal information, account credentials, confidential business information, material non-public information, or private financial records unless you are comfortable with that information being processed by cloud services.</p>
 
     <h2>Third-Party Services and Data Sources</h2>
@@ -151,14 +185,10 @@
     <h2>Retention</h2>
     <p>Local app data remains on your device until you delete it through the app, your operating system, or by uninstalling FilrAI. Support emails may be retained as needed to respond to requests and maintain business records. Cloud providers may retain request data according to their own policies and service configurations.</p>
 
-    <h2>Your Choices</h2>
-    <p>You can choose what information to enter into FilrAI. You may avoid cloud AI processing by not using AI-assisted features. You can request deletion of support communications or ask privacy questions by contacting us at <a href="mailto:filr.support@gmail.com">filr.support@gmail.com</a>.</p>
 
     <h2>Security</h2>
     <p>FilrAI uses reasonable safeguards, including encrypted network connections where supported by third-party services. No method of transmission or storage is completely secure, so please use care when deciding what to submit.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>FilrAI is not intended for children under 13 and does not knowingly collect personal information from children.</p>
 
     <h2>Changes to This Policy</h2>
     <p>This Privacy Policy may be updated as FilrAI features, vendors, or data practices change. The effective date above will be revised when material updates are made.</p>
