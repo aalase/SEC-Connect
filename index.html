@@ -9,10 +9,12 @@
     :root {
       --bg: #050607;
       --bg-accent: #2f3338;
+      --card: #101214;
       --text: #f6f8fa;
       --muted: #c3c9cf;
       --brand: #f7f9fb;
       --brand-strong: #8f969e;
+      --ring: rgba(247, 249, 251, 0.35);
       --border: rgba(255, 255, 255, 0.18);
     }
 
@@ -24,8 +26,8 @@
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--text);
       background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.11) 0 1px, transparent 1px 92px),
-        radial-gradient(1000px circle at 8% 0%, #5f666d 0%, transparent 32%),
+        radial-gradient(1200px circle at 10% -10%, #5f666d 0%, transparent 35%),
+        radial-gradient(1000px circle at 90% 0%, #3d4349 0%, transparent 30%),
         linear-gradient(180deg, var(--bg-accent), var(--bg));
       padding: clamp(1.25rem, 4vw, 4rem);
     }
@@ -74,8 +76,12 @@
       display: inline-block;
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
+      letter-spacing: 0.08em;
+      color: #f7f9fb;
+      background: rgba(247, 249, 251, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
       margin-bottom: 1rem;
     }
 
@@ -113,10 +119,12 @@
       transition: color 0.2s ease, padding-left 0.2s ease, border-color 0.2s ease;
     }
 
-    .link-row::after {
-      content: "→";
-      color: var(--brand-strong);
-      transition: transform 0.2s ease, color 0.2s ease;
+    .link-card:hover,
+    .link-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 0 3px var(--ring);
+      outline: none;
     }
 
     .link-row:hover,
@@ -183,7 +191,7 @@
         <strong>Privacy Policy</strong>
         <span>How your data is handled and what is (and is not) collected.</span>
       </a>
-      <a class="link-row" href="terms.html">
+      <a class="link-card" href="terms.html">
         <strong>Terms and Conditions</strong>
         <span>Terms of use, AI disclosure, and financial disclaimer in one place.</span>
       </a>
